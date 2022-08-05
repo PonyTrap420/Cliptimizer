@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/Cliptimizer">
+        <file>icons/folder.svg</file>
+        <file>icons/video.svg</file>
+        <file>icons/leftarrow.svg</file>
+        <file>icons/rightarrow.svg</file>
+        <file>icons/pause.svg</file>
+        <file>icons/play.svg</file>
+        <file>icons/fullscreen.svg</file>
+        <file>icons/outfolder.svg</file>
+        <file>icons/optimize.svg</file>
+        <file>icons/optimizearrow.svg</file>
+        <file>icons/downarrow.svg</file>
+        <file>resources/warning.png</file>
+        <file>icons/checkbox-checked.svg</file>
+        <file>icons/checkbox-indeterminate.svg</file>
+        <file>resources/loading.gif</file>
+    </qresource>
+</RCC>
