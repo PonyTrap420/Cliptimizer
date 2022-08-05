@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://github.com/PonyTrap420/Cliptimizer"><img src="https://github.com/PonyTrap420/Cliptimizer/blob/2e1af43f69092b2e7a5b978b1ed5d6f7043db369/forms/resources/Cliptimizer.png" alt="Cliptimizer" width="200"></a>
+  <a href="https://github.com/PonyTrap420/Cliptimizer"><img src="https://github.com/PonyTrap420/Cliptimizer/blob/491bd66efe6c4fe27b4be62c6d91be5c28c2c350/forms/resources/Cliptimizer.png" alt="Cliptimizer" width="200"></a>
   <br>
   Cliptimizer
   <br>
@@ -15,7 +15,7 @@
 </p>
 
 <p align="center">
-  <img src=https://github.com/PonyTrap420/Cliptimizer/blob/2e1af43f69092b2e7a5b978b1ed5d6f7043db369/forms/resources/banner.png/>
+  <img src=https://github.com/PonyTrap420/Cliptimizer/blob/491bd66efe6c4fe27b4be62c6d91be5c28c2c350/forms/resources/banner.png/>
 </p> 
 
 ## Why should you use it?
