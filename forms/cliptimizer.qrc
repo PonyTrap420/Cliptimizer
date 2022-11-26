@@ -15,5 +15,6 @@
         <file>icons/checkbox-checked.svg</file>
         <file>icons/checkbox-indeterminate.svg</file>
         <file>resources/loading.gif</file>
+        <file>icons/delete.svg</file>
     </qresource>
 </RCC>

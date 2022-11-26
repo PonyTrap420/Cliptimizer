@@ -271,6 +271,63 @@ QPushButton:disabled {
                </widget>
               </item>
               <item>
+               <widget class="QPushButton" name="deleteBtn">
+                <property name="minimumSize">
+                 <size>
+                  <width>40</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>40</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QWidget{
+    background-color: white;
+}
+
+QPushButton {
+    background-color: transparent;
+    padding: 10px 64px 10px 64px;
+    
+	font: 700 10pt &quot;Segoe UI&quot;;
+    border: transparent;
+    border-radius: 4px;
+    /* height: 40px; */
+}
+
+QPushButton:pressed:hover {
+    background-color:#090909;
+}
+
+QPushButton:hover {
+    background-color: #101010;
+}
+
+QPushButton:disabled {
+    background-color: rgb(204, 204, 204);
+    color: rgb(122, 122, 122);
+}</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset resource="cliptimizer.qrc">
+                  <normaloff>:/Cliptimizer/icons/delete.svg</normaloff>:/Cliptimizer/icons/delete.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item>
                <spacer name="ctrlSpaceL">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>

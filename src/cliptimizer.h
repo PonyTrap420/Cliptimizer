@@ -21,6 +21,7 @@ public slots:
 private slots:
     void on_folder_pressed();
     void on_clip_pressed();
+    void on_delete_pressed();
 
     void on_trim_pressed();
 

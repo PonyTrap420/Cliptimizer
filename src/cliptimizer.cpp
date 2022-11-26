@@ -18,6 +18,7 @@ Cliptimizer::Cliptimizer(QWidget *parent)
     connect(ui.pauseBtn, SIGNAL(pressed()), this, SLOT(on_pause_pressed()));
     connect(ui.outfolderBtn, SIGNAL(pressed()), this, SLOT(on_outpath_pressed()));
     connect(ui.fullscreenBtn, SIGNAL(pressed()), this, SLOT(on_fullscreen_pressed()));
+    connect(ui.deleteBtn, SIGNAL(pressed()), this, SLOT(on_delete_pressed()));
 
     player = new QMediaPlayer(ui.gView);
     videoWidget = new QVideoWidget(ui.gView);
@@ -143,6 +144,8 @@ void Cliptimizer::on_folder_pressed() {
         EditMode();
     }
     ui.optimizeLevel->setVisible(false);
+    ui.deleteBtn->setVisible(true);
+
     PlayClip(clips[currentClip]);
 }
 
@@ -166,6 +169,7 @@ void Cliptimizer::on_clip_pressed()
         EditMode();
     }
     ui.optimizeLevel->setVisible(false);
+    ui.deleteBtn->setVisible(false);
 
     PlayClip(path);
 
@@ -248,6 +252,24 @@ void Cliptimizer::on_trim_pressed() {
     QLocale locale = this->locale();
     ui.size_before->setText(locale.formattedDataSize(util::GetFileSize(currentPath),2 ,QLocale::DataSizeTraditionalFormat));
 
+}
+
+void Cliptimizer::on_delete_pressed()
+{
+    Dialog* diag = new Dialog();
+    diag->SetMessage("Are you sure you want to permanently remove this clip?");
+    diag->SetCheckBoxEnabled(false);
+
+    connect(diag, &Dialog::first_btn_pressed, [=]()
+        {
+            QString last = currentPath;
+            clips.removeAt(currentClip);
+            currentClip--;
+            on_next_pressed();
+            bool res = QFile::remove(last);
+        });
+
+    diag->exec();
 }
 
 void Cliptimizer::on_next_pressed() {
