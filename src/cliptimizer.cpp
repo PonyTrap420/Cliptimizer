@@ -38,6 +38,7 @@ Cliptimizer::Cliptimizer(QWidget *parent)
     ui.stackedWidget->setCurrentIndex(1);
     ui.videostacked->setCurrentIndex(0);
     resize(450, 200);
+    setMaximumSize(450, 200);
 
     ffmpegPath = ".\\ffmpeg.exe";
 }
@@ -124,6 +125,11 @@ void Cliptimizer::on_folder_pressed() {
         std::string ext = entry.path().extension().string();
         if (ext == ".mp4" || ext == ".mov" || ext == ".avi")
             clips.append(QString::fromStdString(entry.path().string()));
+    }
+
+    if (clips.size() == 0)
+    {
+        return;
     }
 
     currentClip = 0;
