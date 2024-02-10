@@ -196,8 +196,7 @@ void Cliptimizer::on_outpath_pressed()
 
 void Cliptimizer::on_fullscreen_pressed()
 {
-   videoWidget->setFullScreen(true);
-    videoWidget->resize(1920,1079);
+    !isFullScreen() ? showFullScreen() : showNormal();
 }
 
 void Cliptimizer::on_trim_pressed() {

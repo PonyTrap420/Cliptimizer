@@ -18,6 +18,14 @@ public slots:
 
     void ProcessStateChanged(QProcess::ProcessState newState);
 
+protected:
+    void keyPressEvent(QKeyEvent* event) override {
+        if (event->key() == Qt::Key_Escape) {
+            showNormal();
+        }
+        QMainWindow::keyPressEvent(event);
+    }
+
 private slots:
     void on_folder_pressed();
     void on_clip_pressed();
